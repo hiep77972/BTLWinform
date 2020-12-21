@@ -1,0 +1,10 @@
+C:\Users\Admin\OneDrive\Desktop\ProjectWin\BTL_Win\BTL_Win\bin\Debug\BTL_Win.exe.config
+C:\Users\Admin\OneDrive\Desktop\ProjectWin\BTL_Win\BTL_Win\bin\Debug\BTL_Win.exe
+C:\Users\Admin\OneDrive\Desktop\ProjectWin\BTL_Win\BTL_Win\bin\Debug\BTL_Win.pdb
+C:\Users\Admin\OneDrive\Desktop\ProjectWin\BTL_Win\BTL_Win\obj\Debug\BTL_Win.csprojAssemblyReference.cache
+C:\Users\Admin\OneDrive\Desktop\ProjectWin\BTL_Win\BTL_Win\obj\Debug\BTL_Win.Form1.resources
+C:\Users\Admin\OneDrive\Desktop\ProjectWin\BTL_Win\BTL_Win\obj\Debug\BTL_Win.Properties.Resources.resources
+C:\Users\Admin\OneDrive\Desktop\ProjectWin\BTL_Win\BTL_Win\obj\Debug\BTL_Win.csproj.GenerateResource.cache
+C:\Users\Admin\OneDrive\Desktop\ProjectWin\BTL_Win\BTL_Win\obj\Debug\BTL_Win.csproj.CoreCompileInputs.cache
+C:\Users\Admin\OneDrive\Desktop\ProjectWin\BTL_Win\BTL_Win\obj\Debug\BTL_Win.exe
+C:\Users\Admin\OneDrive\Desktop\ProjectWin\BTL_Win\BTL_Win\obj\Debug\BTL_Win.pdb
