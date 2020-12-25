@@ -11,6 +11,8 @@ namespace BTL_Win
 {
     public partial class Form1 : Form
     {
+        int thaotac = 0;
+        double x, ep;
         public Form1()
         {
             InitializeComponent();
@@ -20,6 +22,30 @@ namespace BTL_Win
             if (n == 0 || n == 1)
                 return 1;
             else return n*taithua(n - 1);
+        }
+        void KhoiTao()
+        {
+            
+            try
+            {
+                x = Double.Parse(txtx.Text);
+            }
+            catch
+            {
+                MessageBox.Show("Vui lòng nhập số thực", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtx.Select();
+                return;
+            }
+            try
+            {
+                ep = Double.Parse(txtep.Text);
+            }
+            catch
+            {
+                MessageBox.Show("Vui lòng nhập số thực", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtep.Select();
+                return;
+            }
         }
         double tinhsin(double x,double ep)
         {
@@ -50,106 +76,74 @@ namespace BTL_Win
 
         private void button1_Click(object sender, EventArgs e)
         {
-            double x, ep;
-            try
-            {
-                x = Double.Parse(txtx.Text);
-            }
-            catch
-            {
-                MessageBox.Show("Vui lòng nhập số thực", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txtx.Select();
-                return;
-            }
-            try
-            {
-                ep = Double.Parse(txtep.Text);
-            }
-            catch
-            {
-                MessageBox.Show("Vui lòng nhập số thực", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txtep.Select();
-                return;
-            }
+            thaotac = 1;
+            KhoiTao();
             txtkq.Text = tinhsin(x,ep).ToString();
+            txtkqHam.Text = Math.Sin(x).ToString();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            double x, ep;
-            try
-            {
-                x = Double.Parse(txtx.Text);
-            }
-            catch
-            {
-                MessageBox.Show("Vui lòng nhập số thực", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txtx.Select();
-                return;
-            }
-            try
-            {
-                ep = Double.Parse(txtep.Text);
-            }
-            catch
-            {
-                MessageBox.Show("Vui lòng nhập số thực", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txtep.Select();
-                return;
-            }
+            thaotac = 1;
+            KhoiTao();
             txtkq.Text = tinhcos(x, ep).ToString();
+            txtkqHam.Text = Math.Cos(x).ToString();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            double x, ep;
-            try
+            thaotac = 1;
+            KhoiTao();
+            if (tinhcos(x, ep) != 0)
             {
-                x = Double.Parse(txtx.Text);
+            txtkq.Text = (tinhsin(x, ep) / tinhcos(x, ep)).ToString();
+            txtkqHam.Text = (Math.Sin(x)/Math.Cos(x)).ToString();
             }
-            catch
-            {
-                MessageBox.Show("Vui lòng nhập số thực", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txtx.Select();
-                return;
-            }
-            try
-            {
-                ep = Double.Parse(txtep.Text);
-            }
-            catch
-            {
-                MessageBox.Show("Vui lòng nhập số thực", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txtep.Select();
-                return;
-            }
-            txtkq.Text = (tinhsin(x, ep)/ tinhcos(x, ep)).ToString();
+                
+            else
+                MessageBox.Show("Nhập dữ liệu sai", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            double x, ep;
-            try
+            thaotac = 1;
+            KhoiTao();
+            if (tinhsin(x, ep) != 0)
             {
-                x = Double.Parse(txtx.Text);
-            }
-            catch
-            {
-                MessageBox.Show("Vui lòng nhập số thực", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txtx.Select();
-                return;
-            }
-            try
-            {
-                ep = Double.Parse(txtep.Text);
-            }
-            catch
-            {
-                MessageBox.Show("Vui lòng nhập số thực", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txtep.Select();
-                return;
-            }
             txtkq.Text = (tinhcos(x, ep) / tinhsin(x, ep)).ToString();
+            txtkqHam.Text = (Math.Cos(x) / Math.Sin(x)).ToString();
+            }
+            else
+                MessageBox.Show("Nhập dữ liệu sai", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            txtx.Text = "";
+            txtep.Text = "";
+            txtkq.Text = "";
+            txtkqHam.Text = "";
+            thaotac = 0;
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            if (txtkq.Text.Trim()=="" && txtkqHam.Text.Trim()=="") return;
+            else
+            {
+                if (Double.Parse(txtkq.Text) > Double.Parse(txtkqHam.Text))
+                    MessageBox.Show("Kết quả bài toán lớn hơn hàm lượng giác có sẵn","So Sánh", MessageBoxButtons.OK);
+                else if (Double.Parse(txtkq.Text) < Double.Parse(txtkqHam.Text))
+                    MessageBox.Show("Kết quả bài toán nhỏ hơn hàm lượng giác có sẵn","So Sánh", MessageBoxButtons.OK);
+                else
+                    MessageBox.Show("Kết quả bài toán bằng hàm lượng giác có sẵn","So Sáng", MessageBoxButtons.OK);
+            }
+
         }
     }
 }

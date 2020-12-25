@@ -40,6 +40,11 @@ namespace BTL_Win
             this.txtkq = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtkqHam = new System.Windows.Forms.TextBox();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -117,19 +122,19 @@ namespace BTL_Win
             // 
             // txtkq
             // 
-            this.txtkq.Location = new System.Drawing.Point(97, 218);
+            this.txtkq.Location = new System.Drawing.Point(141, 218);
             this.txtkq.Name = "txtkq";
-            this.txtkq.Size = new System.Drawing.Size(316, 20);
+            this.txtkq.Size = new System.Drawing.Size(272, 20);
             this.txtkq.TabIndex = 8;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(22, 218);
+            this.label3.Location = new System.Drawing.Point(22, 221);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(46, 13);
+            this.label3.Size = new System.Drawing.Size(113, 13);
             this.label3.TabIndex = 9;
-            this.label3.Text = "Kết Quả";
+            this.label3.Text = "Kết Quả Chương Trình";
             // 
             // label4
             // 
@@ -141,11 +146,62 @@ namespace BTL_Win
             this.label4.Text = "Tính hàm lượng giác gần đúng theo công thức";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(23, 268);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(46, 13);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "Kết Quả";
+            // 
+            // txtkqHam
+            // 
+            this.txtkqHam.Location = new System.Drawing.Point(141, 265);
+            this.txtkqHam.Name = "txtkqHam";
+            this.txtkqHam.Size = new System.Drawing.Size(272, 20);
+            this.txtkqHam.TabIndex = 12;
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(338, 315);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(75, 23);
+            this.button5.TabIndex = 13;
+            this.button5.Text = "Thoát";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(129, 315);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(75, 23);
+            this.button6.TabIndex = 14;
+            this.button6.Text = "So Sánh";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(237, 315);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(75, 23);
+            this.button7.TabIndex = 15;
+            this.button7.Text = "Tiếp";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(436, 264);
+            this.ClientSize = new System.Drawing.Size(464, 369);
+            this.Controls.Add(this.button7);
+            this.Controls.Add(this.button6);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.txtkqHam);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtkq);
@@ -177,6 +233,11 @@ namespace BTL_Win
         private System.Windows.Forms.TextBox txtkq;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtkqHam;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button7;
     }
 }
 
